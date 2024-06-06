@@ -8,26 +8,29 @@
 
 :root {
     text-decoration: none;
+    font-size: calc(1rem + 0.25vw);
+
 
 }
 
 html, body {
-    font-size: calc(1rem + 0.25vw);
     padding: 0;
     margin: 0;
     font-family: 'Albert Sans';
     font-weight: 500;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+
 }
 body {
     background-size: cover;
     background: rgb(255, 255, 255);
-    width: 100vw;
-    min-height: 90svh;
 
 }
 
 .content {
-    padding: 0 3rem 0 3rem;
+    padding: 0 5vw; 
+    max-width: 100%; 
+    box-sizing: border-box; 
 }
 
 main {    
@@ -37,10 +40,17 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 1rem; 
+
+}
+
+main h1, main h2, main h3 {
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 main h1 {
-    font-size: 100px;   
+    font-size: calc(2rem + 3vw);
 
 }
 
@@ -57,10 +67,26 @@ footer p {
 .bluetext {
     color: #23b8cc;
     font-weight: 700;
-    font-size: 120%;
+    font-size: 1.2em;
 }
 
 a {
     text-decoration: none;
     color:#23b8cc;
+    word-wrap: break-word;
+
+}
+
+@media (max-width: 600px) {
+    .content {
+        padding: 0 2vw; 
+    }
+
+    main h1 {
+        font-size: calc(1.5rem + 4vw); 
+    }
+
+    main h2, main h3 {
+        font-size: calc(1rem + 2vw);
+    }
 }
