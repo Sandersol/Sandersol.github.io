@@ -1,22 +1,88 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="nb">
 <head>
-    <link rel="stylesheet" href="./static/css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="0tZgbNDyq52v9XNJUbe10Wbr-MvYUWHcJIDY-e_954s" />
-    <title>Tibber-vervekode</title>
-
+    <meta name="google-site-verification" content="0tZgbNDyq52v9XNJUbe10Wbr-MvYUWHcJIDY-e_954s">
+    <title>HiRO rabattkode: 150 kr rabatt på din første HiRO</title>
+    <meta name="description" content="Bruk rabattkoden SANDER0000 og få 150 kr i rabatt på din første HiRO-høyttaler. Lenken legger inn koden automatisk i kassen på hiro.no.">
+    <link rel="canonical" href="https://sandersol.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nb_NO">
+    <meta property="og:url" content="https://sandersol.github.io/">
+    <meta property="og:title" content="HiRO rabattkode: 150 kr rabatt">
+    <meta property="og:description" content="Få 150 kr i rabatt på din første HiRO med koden SANDER0000.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;700;800&display=swap">
+    <link rel="stylesheet" href="./static/css/hiro.css">
 </head>
 <body>
-    <div class="content">
-        <main>
-            <h1>Lyst på 500kr i vervebonus hos Tibber?</h1>
-            <h2>Bruk min vervekode <i class="bluetext">entgcihn</i> (eller trykk  <a href="https://invite.tibber.com/entgcihn"> her</a>)</h2>
-            <h3>Da får både du og jeg 500kr å bruke i Tibber-shoppen!</h3>
-        </main>
-        <footer>
-            <p>Laget av Sander <br>Hostet på GitHub Pages</p>
+    <main class="side">
+        <header class="topp">
+            <h1>HiRO rabattkode</h1>
+            <p class="ingress">Få 150 kr i rabatt på din første HiRO med koden min.</p>
+
+            <div class="kupong">
+                <span class="kupong-etikett">Rabattkode</span>
+                <div class="kupong-rad">
+                    <code id="kode">SANDER0000</code>
+                    <button type="button" id="kopier" data-kode="SANDER0000">Kopier</button>
+                </div>
+            </div>
+
+            <a class="knapp" href="https://hiro.no/discount/SANDER0000" rel="sponsored noopener">Handle på hiro.no med rabatten</a>
+            <p class="liten">Lenken legger inn koden automatisk i handlekurven.</p>
+        </header>
+
+        <section>
+            <h2>Slik bruker du koden</h2>
+            <ol>
+                <li>Trykk på knappen over. Da åpnes hiro.no, og koden legges inn i handlekurven.</li>
+                <li>Velg høyttaleren eller en av pakkene, og gå til kassen.</li>
+                <li>Sjekk at rabatten på 150 kr står i kassen. Står den ikke der, skriver du SANDER0000 i feltet for rabattkode.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Hva er HiRO?</h2>
+            <p>HiRO er en norsk høyttaler for barn uten skjerm. Barnet velger sanger, lydbøker og eventyr ved å legge et kort på høyttaleren, uten at en voksen må hjelpe til.</p>
+            <p>Høyttaleren koster 1&nbsp;699&nbsp;kr, og pakkene for <span class="hel">1–3 år</span> og <span class="hel">4–6 år</span> med kort koster 2&nbsp;449&nbsp;kr. Prisene er hentet fra hiro.no i november 2026.</p>
+            <p>Vi har nettopp bestilt en HiRO til fireåringen vår, og jeg glemte selv å bruke en rabattkode. Derfor deler jeg koden min her.</p>
+        </section>
+
+        <section>
+            <h2>Vanlige spørsmål</h2>
+            <h3>Hvem kan bruke koden?</h3>
+            <p>Koden gir 150 kr i rabatt når du kjøper din første HiRO.</p>
+            <h3>Hva får du som deler koden?</h3>
+            <p>Jeg får et gavekort på 150 kr hos HiRO når noen kjøper sin første HiRO med koden min. Du betaler ikke noe ekstra for det.</p>
+            <h3>Hva om koden ikke virker?</h3>
+            <p>Da kan HiRO ha endret eller avsluttet vervetilbudet. Siden ble sist oppdatert 08.11.2026.</p>
+        </section>
+
+        <footer class="bunn">
+            <p>Laget av Sander. Siden er ikke laget av eller tilknyttet HiRO.</p>
+            <p>Har du strøm fra Tibber? Her er <a href="./tibber-vervekode/">Tibber-vervekoden min</a>.</p>
         </footer>
-    </div>
+    </main>
+
+    <script>
+        const knapp = document.getElementById('kopier');
+        knapp.addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(knapp.dataset.kode);
+            } catch {
+                const utvalg = getSelection();
+                const omrade = document.createRange();
+                omrade.selectNodeContents(document.getElementById('kode'));
+                utvalg.removeAllRanges();
+                utvalg.addRange(omrade);
+                document.execCommand('copy');
+            }
+            knapp.textContent = 'Kopiert';
+            setTimeout(() => { knapp.textContent = 'Kopier'; }, 2000);
+        });
+    </script>
 </body>
 </html>

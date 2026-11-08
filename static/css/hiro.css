@@ -1,0 +1,168 @@
+:root {
+    --bg: #fbf8f3;
+    --flate: #ffffff;
+    --tekst: #1f1d1a;
+    --dempet: #5f5a52;
+    --linje: #e6dfd3;
+    --aksent: #b8432f;
+    --aksent-tekst: #ffffff;
+    --kupong-bg: #fff4ec;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #171513;
+        --flate: #211e1b;
+        --tekst: #f2eee8;
+        --dempet: #b3aca1;
+        --linje: #3a352f;
+        --aksent: #f07a62;
+        --aksent-tekst: #171513;
+        --kupong-bg: #2a211c;
+    }
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg);
+    color: var(--tekst);
+    font-family: 'Albert Sans', system-ui, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+}
+
+.side {
+    max-width: 38rem;
+    margin: 0 auto;
+    padding: 3rem 1rem 2rem;
+}
+
+.topp {
+    text-align: center;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--linje);
+}
+
+h1 {
+    font-size: clamp(2.25rem, 7vw, 3.25rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 0.75rem;
+    letter-spacing: -0.01em;
+}
+
+.ingress {
+    font-size: 1.25rem;
+    color: var(--dempet);
+    margin: 0 0 2rem;
+}
+
+.kupong {
+    background: var(--kupong-bg);
+    border: 2px dashed var(--aksent);
+    border-radius: 14px;
+    padding: 1rem 1.25rem 1.25rem;
+    margin: 0 auto 1.5rem;
+    max-width: 24rem;
+}
+
+.kupong-etikett {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--dempet);
+    margin-bottom: 0.5rem;
+}
+
+.kupong-rad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+code {
+    font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    user-select: all;
+}
+
+#kopier {
+    font: inherit;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 8px;
+    border: 1px solid var(--aksent);
+    background: var(--flate);
+    color: var(--aksent);
+    cursor: pointer;
+    min-width: 6rem;
+}
+
+#kopier:hover { background: var(--kupong-bg); }
+
+.knapp {
+    display: inline-block;
+    background: var(--aksent);
+    color: var(--aksent-tekst);
+    font-weight: 700;
+    font-size: 1.125rem;
+    text-decoration: none;
+    padding: 0.9rem 1.5rem;
+    border-radius: 12px;
+}
+
+.knapp:hover { filter: brightness(1.08); }
+
+.liten {
+    font-size: 0.875rem;
+    color: var(--dempet);
+    margin: 0.75rem 0 0;
+}
+
+section {
+    padding: 2rem 0 0.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0 0 0.75rem;
+}
+
+h3 {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    margin: 1.25rem 0 0.25rem;
+}
+
+section p, section ol {
+    margin: 0 0 0.75rem;
+}
+
+ol { padding-left: 1.25rem; }
+
+li { margin-bottom: 0.5rem; }
+
+a { color: var(--aksent); }
+
+.hel { white-space: nowrap; }
+
+.bunn {
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--linje);
+    font-size: 0.9375rem;
+    color: var(--dempet);
+}
+
+.bunn p { margin: 0 0 0.5rem; }
