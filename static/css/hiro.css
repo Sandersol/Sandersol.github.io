@@ -7,6 +7,8 @@
     --aksent: #b8432f;
     --aksent-tekst: #ffffff;
     --kupong-bg: #fff4ec;
+    --merknad-bg: #fff8db;
+    --merknad-kant: #e8d48a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,6 +21,8 @@
         --aksent: #f07a62;
         --aksent-tekst: #171513;
         --kupong-bg: #2a211c;
+        --merknad-bg: #2b2716;
+        --merknad-kant: #5c5226;
     }
 }
 
@@ -61,6 +65,16 @@ h1 {
     font-size: 1.25rem;
     color: var(--dempet);
     margin: 0 0 2rem;
+}
+
+.merknad {
+    background: var(--merknad-bg);
+    border: 1px solid var(--merknad-kant);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    margin: -0.75rem auto 1.75rem;
+    max-width: 24rem;
+    font-size: 0.9375rem;
 }
 
 .kupong {
