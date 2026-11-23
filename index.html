@@ -4,15 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="0tZgbNDyq52v9XNJUbe10Wbr-MvYUWHcJIDY-e_954s">
-    <!-- Midlertidig: forsiden sender videre til HiRO-siden til det finnes en egen forside.
-         Google behandler meta refresh med 0 sekunder som en permanent flytting. -->
     <title>sandersol.no</title>
-    <link rel="canonical" href="https://sandersol.no/hiro-rabattkode/">
-    <meta http-equiv="refresh" content="0; url=/hiro-rabattkode/">
-    <script>location.replace("/hiro-rabattkode/" + location.hash);</script>
-    <style>body { margin: 0; padding: 2rem 1rem; font-family: system-ui, sans-serif; background: #fff; color: #222; }</style>
+    <meta name="description" content="Sanders lille side. Her ligger Tibber-vervekoden min.">
+    <link rel="canonical" href="https://sandersol.no/">
+    <style>
+        :root { --bg: #fbf8f3; --tekst: #1f1d1a; --dempet: #5f5a52; --aksent: #b8432f; }
+        @media (prefers-color-scheme: dark) {
+            :root { --bg: #171513; --tekst: #f2eee8; --dempet: #b3aca1; --aksent: #f07a62; }
+        }
+        body { margin: 0; background: var(--bg); color: var(--tekst); font-family: system-ui, sans-serif; font-size: 1.0625rem; line-height: 1.6; }
+        main { max-width: 38rem; margin: 0 auto; padding: 4rem 1rem 2rem; }
+        h1 { font-size: 2.25rem; margin: 0 0 0.5rem; }
+        p { color: var(--dempet); margin: 0 0 1.5rem; }
+        ul { padding-left: 1.25rem; }
+        a { color: var(--aksent); }
+    </style>
 </head>
 <body>
-    <p><a href="/hiro-rabattkode/">HiRO rabattkode</a> · <a href="/tibber-vervekode/">Tibber vervekode</a></p>
+    <main>
+        <h1>sandersol.no</h1>
+        <p>Sanders lille side på nettet.</p>
+        <ul>
+            <li><a href="/tibber-vervekode/">Tibber-vervekoden min</a></li>
+        </ul>
+    </main>
 </body>
 </html>
